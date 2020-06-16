@@ -1,0 +1,170 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    .contenter{
+        width: 100vw;
+        height: 100vh;  
+        padding-top: 60px;
+        box-sizing: border-box;
+        .song-img{
+            position: relative;
+            width: 70%;
+            height: 0;
+            padding-top: 70%;
+            margin: 0 auto;
+            .img-wrapper{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0; 
+                right: 0;
+                border-radius: 50%;
+                background-color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width:80%;
+                    height:80%;
+                    border-radius: 50%;                    
+                }
+            }
+        }
+        .song-info{
+            width: 100%;
+            height: 126px;
+            margin-top: 20px;
+            // border: 1px solid #000;
+            color: #fff;
+            text-align: center;
+            .song-name{
+                font-size: 1.5rem; 
+                line-height: 36px;
+                margin-bottom: 5px;
+            }
+            .singer-name{
+                font-size: 1rem; 
+                margin-bottom: 5px;
+            }
+            .album-name{
+                font-size: 0.8rem;
+            }
+        }
+        .pro{
+            display: flex;
+            .cur-time,.all-time{
+                width: 60px;
+                height: 40px;
+                // border: 1px solid #000;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+            }
+            .pro-wrapper{
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+                padding: 0 3px;
+                .pro-bottom,.pro-top{
+                    position: absolute;
+                    top: 20px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgba(255, 255, 255, .5);
+                    border-radius: 5px;
+                }
+                .pro-top{
+                    // 动态修改 width
+                    width: 0%;
+                    background-color: rgba(255, 255, 255, 1);   
+                    .spot{
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: -10px;
+                        top: -9px;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       &::after{
+                        content: "";
+                        display: block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                       }
+                    }
+                }
+            }
+        }
+        .control-menu{
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .6);
+            display: flex;
+            .btn-wrapper{
+                flex: 1;
+                background-repeat: no-repeat;
+                background-size: 20px;
+                background-position: center center;
+            }
+            .like-btn{
+                background-image: url(../images/icon-like.png);
+                //同时具有 like-btn 与 liking 类名 则用此张图片
+                &.liking{
+                background-image: url(../images/icon-like-solid.png);
+                }
+            }
+            .prev-btn{
+                background-image: url(../images/icon-prev.png);
+
+            }
+            .play-btn{
+                background-image: url(../images/icon-play.png);
+                 //同时具有 play-btn 与 playing 类名 则用此张图片
+                &.playing{
+                    background-image: url(../images/icon-pause.png);
+                }
+            }
+            .next-btn{
+                background-image: url(../images/icon-next.png);
+
+            }
+            .list-btn{
+                background-image: url(../images/icon-list.png);
+            }
+        }
+        .song-list{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-top: 2px;
+            background-color:rgba(0, 0, 0, .9);
+            .song{
+                height: 40px;
+                line-height: 20px;
+                padding-top: 10px;
+                text-align: center;
+                font-size: 16px;
+                color: rgba(255, 255, 255,.6);
+                border-bottom: 1px solid rgba(255, 255, 255,.2);
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+

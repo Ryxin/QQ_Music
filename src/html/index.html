@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ音乐播放器</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="../css//index.css">
+</head>
+
+<body>
+    <div class="contenter">
+        <!-- 歌曲图片 -->
+        <div class="song-img">
+            <div class="img-wrapper" data-deg = 0 >
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <!-- 歌曲信息 -->
+        <div class="song-info"></div>
+        <!-- 进度条模块 -->
+        <div class="pro">
+            <div class="cur-time">00:00</div>
+            <div class="pro-wrapper">
+                <div class="pro-bottom"></div>
+                <div class="pro-top">
+                    <div class="spot"></div>
+                </div>
+            </div>
+            <div class="all-time">04:10</div>
+        </div>
+
+        <!-- 控制按钮模块 -->
+        <div class="control-menu">
+            <!--  liking  实心-->
+            <div class="btn-wrapper like-btn"></div>
+            <div class="btn-wrapper prev-btn"></div>
+            <!-- playing  开始播放-->
+            <div class="btn-wrapper play-btn"></div>
+            <div class="btn-wrapper next-btn"></div>
+            <div class="btn-wrapper list-btn"></div>
+        </div>
+        <!-- 歌曲播放列表  此处应该动态生成,本人赖的弄，直接写死了 -->
+        <div class="song-list">
+            <!-- <div class="song song1">丑八怪</div>
+            <div class="song song2">小半</div>
+            <div class="song song3">Shape of You</div> -->
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/gaussBlur.js"></script>
+    <script src="../js/render.js"></script>
+    <script src="../js/audioContlor.js"></script>
+    <script src="../js/pro.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+    
+</html>
